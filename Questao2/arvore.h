@@ -1,3 +1,4 @@
+//Letra C
 typedef struct nos{
     int chave;
     struct nos *esquerda, *direita;
@@ -35,7 +36,7 @@ void imprime(Nos *raiz){
     }
 }
 
-void imprimeInverso(Nos *raiz){
+void imprimeInverso(Nos *raiz){ //Letra C-II
     if(raiz != NULL){
         imprimeInverso(raiz->direita);
         printf("%d ", raiz->chave);
@@ -90,7 +91,7 @@ Nos* remover(Nos *raiz, int item){
     }
 }
 
-int maior(Nos* raiz){
+int maior(Nos* raiz){ //Letra C-III, só verifica a parte da direita da árvore, pois é onde vai estar o maior elemento
     if (raiz == NULL){
         printf("A árvore está vazia\n");
     }
@@ -100,7 +101,7 @@ int maior(Nos* raiz){
     return maior(raiz->direita);
 }
 
-Nos* buscar(Nos* raiz, int valor){
+Nos* buscar(Nos* raiz, int valor){ //Letra C-I
     if(raiz == NULL || raiz->chave == valor){
         return raiz;
     }
